@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Report</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+    <h4 style="margin-top: 10px; margin-bottom: 6px; text-align: center;">Users</h4>
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>CPF</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{!-- Loop in users list, passed on compile function in controller class --}}
+            {{#each content}}
+            <tr>
+                {{!-- Attributes from user object --}}
+                <td>{{ID}}</td>
+                <td>{{NAME}}</td>
+                <td>{{EMAIL}}</td>
+                <td>{{cpfHandler CPF}}</td>
+            </tr>
+            {{!-- closing loop --}}
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+
+</html>
+
